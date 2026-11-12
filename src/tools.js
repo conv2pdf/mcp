@@ -9,8 +9,8 @@ import { InputError, discardOutput, inputFile, reserveOutput } from './files.js'
 import { NO_KEY, apiErrorText } from './messages.js';
 
 export const INSTRUCTIONS =
-  'Conv2pdf converts and edits files that are on this computer: Office documents, images, e-books, PostScript and ' +
-  'HTML files to PDF, PDF to Word or to images, and merging, splitting, extracting pages, rotating, numbering, ' +
+  'Conv2pdf converts and edits files that are on this computer: Office documents, images, e-books, PostScript, XPS ' +
+  'and HTML files to PDF, PDF to Word or to images, and merging, splitting, extracting pages, rotating, numbering, ' +
   'watermarking, compressing, protecting or unlocking PDFs. It also converts a public web page to PDF from its ' +
   'address. Give a tool the path of the file: the result is written next to it, or at output_path, and its path is ' +
   'returned. The files are uploaded to Conv2pdf, hosted in the EU (France), which deletes them once the result is ' +
@@ -29,6 +29,7 @@ export const TO_PDF_TOOLS = {
   'image-to-pdf': ['.png', '.jpg', '.jpeg', '.webp', '.gif', '.tiff', '.tif'],
   'heic-to-pdf': ['.heic', '.heif'],
   'epub-to-pdf': ['.epub'],
+  'xps-to-pdf': ['.xps', '.oxps'],
   'ps-to-pdf': ['.ps', '.eps'],
   'html-to-pdf': ['.html', '.htm', '.xhtml'],
 };
@@ -78,7 +79,7 @@ const FILE_TOOLS = [
     name: 'convert_to_pdf',
     title: 'Convert to PDF',
     description:
-      'Converts a document, an image, an e-book or a web page saved as a file to PDF: Word, Excel, PowerPoint, OpenDocument, Apple Pages, RTF, TXT, CSV, PNG, JPG, WebP, GIF, TIFF, HEIC, EPUB, PostScript (PS, EPS) and HTML. The converter is chosen from the extension of the file. An HTML file is printed as a browser would print it.',
+      'Converts a document, an image, an e-book or a web page saved as a file to PDF: Word, Excel, PowerPoint, OpenDocument, Apple Pages, RTF, TXT, CSV, PNG, JPG, WebP, GIF, TIFF, HEIC, EPUB, PostScript (PS, EPS), XPS (XPS, OXPS) and HTML. The converter is chosen from the extension of the file. An HTML file is printed as a browser would print it.',
     api: toPdfTool,
     extension: '.pdf',
   },

@@ -1,6 +1,6 @@
 # conv2pdf-mcp
 
-Official [Model Context Protocol](https://modelcontextprotocol.io) server of the [Conv2pdf API](https://conv2pdf.com/en/api/). Your AI assistant converts Word, Excel, PowerPoint, Pages, images, e-books, PostScript and HTML files to PDF, as well as web pages from their address, converts PDFs to Word or to images, and merges, splits, compresses, protects, rotates or numbers the PDFs that are on your computer. Processing runs on OVHcloud servers in France: no transfer outside the EU, no US service in the chain.
+Official [Model Context Protocol](https://modelcontextprotocol.io) server of the [Conv2pdf API](https://conv2pdf.com/en/api/). Your AI assistant converts Word, Excel, PowerPoint, Pages, images, e-books, PostScript, XPS and HTML files to PDF, as well as web pages from their address, converts PDFs to Word or to images, and merges, splits, compresses, protects, rotates or numbers the PDFs that are on your computer. Processing runs on OVHcloud servers in France: no transfer outside the EU, no US service in the chain.
 
 [Installation](#installation) · [Tools](#tools) · [How it behaves](#how-it-behaves) · [Development](#development)
 
@@ -49,7 +49,7 @@ Then ask for what you need: "convert report.docx to PDF", "merge these three PDF
 
 | Tool | What it does |
 |---|---|
-| `convert_to_pdf` | Word, Excel, PowerPoint, OpenDocument, Apple Pages, RTF, TXT, CSV, PNG, JPG, WebP, GIF, TIFF, HEIC, EPUB, PostScript (PS, EPS) or HTML file to PDF, chosen from the extension |
+| `convert_to_pdf` | Word, Excel, PowerPoint, OpenDocument, Apple Pages, RTF, TXT, CSV, PNG, JPG, WebP, GIF, TIFF, HEIC, EPUB, PostScript (PS, EPS), XPS (XPS, OXPS) or HTML file to PDF, chosen from the extension |
 | `convert_url_to_pdf` | Public web page to PDF, from its address, printed as a browser would |
 | `convert_heic_to_jpg` | iPhone HEIC or HEIF photo to JPG |
 | `convert_pdf_to_word` | PDF with real text to an editable DOCX document |

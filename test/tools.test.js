@@ -58,6 +58,7 @@ test('convert_to_pdf picks the Conv2pdf tool from the extension, whatever its ca
   const cases = {
     'photo.PNG': 'image-to-pdf', 'IMG_1.heic': 'heic-to-pdf', 'book.epub': 'epub-to-pdf', 'notes.pages': 'office-to-pdf',
     'sheet.xlsx': 'office-to-pdf', 'drawing.EPS': 'ps-to-pdf', 'print.ps': 'ps-to-pdf', 'page.htm': 'html-to-pdf',
+    'order.xps': 'xps-to-pdf', 'scan.OXPS': 'xps-to-pdf',
   };
   const t = await setup({ files: Object.fromEntries(Object.keys(cases).map((name) => [name, 'x'])) });
   try {
@@ -261,6 +262,7 @@ test('a refusal of the API becomes a tool error the model can act on, and leaves
     [422, { error: 'pdf_single_page' }, 'split_pdf', /single page: there is nothing to split/],
     [422, { error: 'ps_blank_output' }, 'compress_pdf', /PostScript file draws no page/],
     [415, { error: 'unsupported_content', detected_type: 'html' }, 'compress_pdf', /web page: give it the \.html extension and use convert_to_pdf/],
+    [415, { error: 'unsupported_content', detected_type: 'xps' }, 'convert_pdf_to_word', /XPS document.*\.xps or \.oxps.*convert_to_pdf/],
     [415, { error: 'unsupported_content', detected_type: 'postscript' }, 'compress_pdf', /PostScript document.*\.ps or \.eps/],
     [400, { error: 'password_too_short', min: 6 }, 'protect_pdf', /at least 6 characters/],
     [422, { error: 'some_new_code' }, 'compress_pdf', /refused the request \(some_new_code\)/],

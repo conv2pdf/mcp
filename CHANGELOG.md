@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.2.0 (2026-11-12)
+
+- `convert_to_pdf` also converts XPS and OpenXPS documents (`.xps`, `.oxps`), the files of the Microsoft XPS Document Writer printer, through the new `xps-to-pdf` tool of the API.
+- A file that holds an XPS document, given to another tool, gets a message that says to name it `.xps` or `.oxps` and use `convert_to_pdf`.
+
 ## 1.1.1 (2026-11-02)
 
 - The repository moved to the conv2pdf organization: [github.com/conv2pdf/mcp](https://github.com/conv2pdf/mcp). The package, the plugin, the skill and `server.json` point there, and the plugin installs with `/plugin marketplace add conv2pdf/mcp`; the old address redirects.

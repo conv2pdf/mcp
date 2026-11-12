@@ -46,6 +46,7 @@ const CONTENT_HINTS = {
   postscript: 'This file is a PostScript document: give it the .ps or .eps extension and use convert_to_pdf.',
   pdf: 'This file is already a PDF.',
   epub: 'This file is an EPUB e-book: give it the .epub extension and use convert_to_pdf.',
+  xps: 'This file is an XPS document: give it the .xps or .oxps extension and use convert_to_pdf.',
   pages: OFFICE_ELSEWHERE,
   docx: OFFICE_ELSEWHERE,
   xlsx: OFFICE_ELSEWHERE,
