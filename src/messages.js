@@ -47,6 +47,9 @@ const CONTENT_HINTS = {
   pdf: 'This file is already a PDF.',
   epub: 'This file is an EPUB e-book: give it the .epub extension and use convert_to_pdf.',
   xps: 'This file is an XPS document: give it the .xps or .oxps extension and use convert_to_pdf.',
+  markdown: 'This file is a Markdown document: give it the .md extension and use convert_to_pdf.',
+  text_encoding:
+    'This Markdown file is not saved as UTF-8, and its accented characters would come out garbled: save it as UTF-8 and try again.',
   pages: OFFICE_ELSEWHERE,
   docx: OFFICE_ELSEWHERE,
   xlsx: OFFICE_ELSEWHERE,
@@ -121,6 +124,7 @@ const MESSAGES = {
   pdf_single_page: 'This PDF has a single page: there is nothing to split.',
   ps_blank_output:
     'This PostScript file draws no page: a file that only holds a font or a library of procedures, or whose program fails, produces none.',
+  markdown_blank_output: 'This Markdown file has nothing to lay out: it is empty, or holds only its front matter.',
   html_blank_output:
     'This HTML file prints as a blank page: nothing in it is drawn when printed. It may be empty, or hide its content for printing.',
   invalid_url: (body) => `This web page address cannot be converted. ${own(URL_CAUSES, body.cause) ?? ''}`.trim(),

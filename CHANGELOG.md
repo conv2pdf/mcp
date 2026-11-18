@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.3.0 (2026-11-18)
+
+- `convert_to_pdf` also converts Markdown files (`.md`, `.markdown`) through the new `markdown-to-pdf` tool of the API: laid out as GitHub shows them, tables, task lists, highlighted code and math included. The file must be saved as UTF-8.
+- A Markdown file given to another tool gets a message that says to use `convert_to_pdf`; a file that is not UTF-8, or that has nothing to lay out, gets a message that says so.
+
 ## 1.2.0 (2026-11-12)
 
 - `convert_to_pdf` also converts XPS and OpenXPS documents (`.xps`, `.oxps`), the files of the Microsoft XPS Document Writer printer, through the new `xps-to-pdf` tool of the API.

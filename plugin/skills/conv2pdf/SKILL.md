@@ -1,6 +1,6 @@
 ---
 name: conv2pdf
-description: Convert and edit the files of the user's computer with the Conv2pdf tools. Use when the user asks to turn a Word, Excel, PowerPoint, OpenDocument, Pages, image, HEIC, EPUB, PostScript, XPS or HTML file, or a web page at an address, into a PDF, to turn a PDF into a Word document or into images, or to merge, split, extract pages from, rotate, number, watermark, compress, password-protect or unlock PDFs, for one file or for a whole folder.
+description: Convert and edit the files of the user's computer with the Conv2pdf tools. Use when the user asks to turn a Word, Excel, PowerPoint, OpenDocument, Pages, image, HEIC, EPUB, PostScript, XPS, Markdown or HTML file, or a web page at an address, into a PDF, to turn a PDF into a Word document or into images, or to merge, split, extract pages from, rotate, number, watermark, compress, password-protect or unlock PDFs, for one file or for a whole folder.
 license: MIT
 compatibility: Needs the Conv2pdf MCP server (npm package conv2pdf-mcp, Node.js 22 or later) and a Conv2pdf API key.
 ---
@@ -20,7 +20,7 @@ The Conv2pdf tools convert and edit files that are on the user's computer. A too
 
 | The user wants | Tool | To know |
 |---|---|---|
-| A PDF from a Word, Excel, PowerPoint, OpenDocument, Pages, RTF, TXT or CSV file, from a PNG, JPG, WebP, GIF, TIFF or HEIC image, from an EPUB book, a PostScript or EPS file, an XPS or OXPS file or an HTML file | `convert_to_pdf` | One file per call. The converter is chosen from the extension |
+| A PDF from a Word, Excel, PowerPoint, OpenDocument, Pages, RTF, TXT or CSV file, from a PNG, JPG, WebP, GIF, TIFF or HEIC image, from an EPUB book, a PostScript or EPS file, an XPS or OXPS file, a Markdown file or an HTML file | `convert_to_pdf` | One file per call. The converter is chosen from the extension |
 | A PDF of a web page, from its address | `convert_url_to_pdf` | A public page only: it is opened without a session, so nothing behind a login. Give `output_path`, since there is no input file to write next to |
 | A JPG from an iPhone HEIC photo | `convert_heic_to_jpg` | |
 | An editable Word document from a PDF | `convert_pdf_to_word` | Only a PDF with real text. A scan is refused, and counted |
